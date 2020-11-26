@@ -187,6 +187,7 @@ public extension AwsContainerRotatingCredentialsProvider {
                         credentialsProvider = staticCredentials
             }
             
+/*
             #if DEBUG
             if credentialsProvider == nil,
                 let rotatingCredentials = getDevRotatingCredentialsProvider(
@@ -195,6 +196,7 @@ public extension AwsContainerRotatingCredentialsProvider {
                     credentialsProvider = rotatingCredentials
             }
             #endif
+*/
             
             return credentialsProvider
     }
@@ -224,7 +226,8 @@ public extension AwsContainerRotatingCredentialsProvider {
                                                   secretAccessKey: secretAccessKey,
                                                   sessionToken: sessionToken)
     }
-    
+
+/*
 #if DEBUG
     private static func getDevRotatingCredentialsProvider<InvocationReportingType: HTTPClientCoreInvocationReporting>(
             fromEnvironment environment: [String: String],
@@ -279,7 +282,7 @@ public extension AwsContainerRotatingCredentialsProvider {
         return rotatingCredentialsProvider
     }
 #endif
-    
+*/    
     private static func getRotatingCredentialsProvider<InvocationReportingType: HTTPClientCoreInvocationReporting>(
         fromEnvironment environment: [String: String],
         reporting: InvocationReportingType,
